@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Admin Login | Chand Mia High School</title>
+  <link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body class="login-page">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <img src="" alt="School Logo" class="login-logo" id="login-logo">
+        <h1 class="login-title">Admin Login</h1>
+        <p class="login-subtitle">Chand Mia High School</p>
+      </div>
+      
+      <div class="login-error" id="login-error"></div>
+      
+      <form class="login-form" id="login-form" novalidate>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" class="form-input" required autocomplete="email" autofocus>
+        </div>
+        
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" name="password" class="form-input" required autocomplete="current-password">
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+      </form>
+      
+      <div class="login-footer">
+        <p>Chand Mia High School Admin Panel</p>
+        <p style="margin-top: var(--spacing-xs); font-size: 0.75rem; opacity: 0.7;">Nesarabad, Pirojpur, Bangladesh</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/admin/js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const form = document.getElementById('login-form');
+      const errorDiv = document.getElementById('login-error');
+      const logoImg = document.getElementById('login-logo');
+      
+      try {
+        const data = await AdminUtils.fetchJSON('/api/settings/public');
+        if (data.settings?.logo) {
+          logoImg.src = data.settings.logo;
+        }
+      } catch (err) {
+        console.error('Failed to load logo:', err);
+      }
+      
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const email = form.email.value.trim();
+        const password = form.password.value;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        
+        if (!email || !password) {
+          errorDiv.textContent = 'Please enter both email and password';
+          errorDiv.classList.add('visible');
+          return;
+        }
+        
+        AdminUtils.setLoading(submitBtn, true);
+        errorDiv.classList.remove('visible');
+        
+        try {
+          await AdminUtils.fetchJSON('/api/auth/login', {
+            method: 'POST',
+            body: JSON.stringify({ email, password })
+          });
+          window.location.href = '/admin/dashboard.html';
+        } catch (err) {
+          errorDiv.textContent = err.message || 'Login failed. Please try again.';
+          errorDiv.classList.add('visible');
+        } finally {
+          AdminUtils.setLoading(submitBtn, false);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

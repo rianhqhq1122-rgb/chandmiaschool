@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Teachers | Chand Mia High School Admin</title>
+  <link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar" role="navigation" aria-label="Admin navigation">
+      <div class="sidebar-header">
+        <img src="" alt="School Logo" class="sidebar-logo" id="sidebar-logo">
+        <span class="sidebar-title">Admin Panel</span>
+        <button class="sidebar-toggle" aria-label="Collapse sidebar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-title">Main</div>
+          <ul class="nav-list">
+            <li><a href="/admin/dashboard.html" class="nav-item"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span><span class="nav-text">Dashboard</span></a></li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <div class="nav-section-title">Content</div>
+          <ul class="nav-list">
+            <li><a href="/admin/settings.html" class="nav-item"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span><span class="nav-text">School Settings</span></a></li>
+            <li><a href="/admin/hero.html" class="nav-item"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span><span class="nav-text">Hero Slides</span></a></li>
+            <li><a href="/admin/students.html" class="nav-item"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="nav-text">Students</span></a></li>
+            <li><a href="/admin/teachers.html" class="nav-item active" aria-current="page"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="nav-text">Teachers</span></a></li>
+            <li><a href="/admin/academics.html" class="nav-item"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span class="nav-text">Academics</span></a></li>
+            <li><a href="/admin/achievements.html" class="nav-item"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-4.5 5 4.5-1.21-9.11"/></svg></span><span class="nav-text">Achievements</span></a></li>
+            <li><a href="/admin/activities.html" class="nav-item"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span class="nav-text">Activities</span></a></li>
+            <li><a href="/admin/gallery.html" class="nav-item"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span><span class="nav-text">Gallery</span></a></li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <div class="nav-section-title">Admissions</div>
+          <ul class="nav-list">
+            <li><a href="/admin/inquiries.html" class="nav-item"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><span class="nav-text">Admission Inquiries</span></a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="user-avatar" id="user-avatar">A</div>
+          <div class="user-details">
+            <div class="user-name" id="user-name">Administrator</div>
+            <div class="user-role">Admin</div>
+          </div>
+          <button class="btn-icon" onclick="logout()" aria-label="Logout" style="margin-left: auto;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+    
+    <div class="sidebar-overlay"></div>
+    
+    <main class="main-content" role="main">
+      <header class="admin-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn btn-icon" aria-label="Toggle menu" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <h1 class="page-title">Teachers</h1>
+        </div>
+      </header>
+      
+      <div class="page-content">
+        <div class="page-header">
+          <div>
+            <h1>Teachers</h1>
+            <p>Manage teacher profiles and information</p>
+          </div>
+          <button class="btn btn-primary" onclick="openTeacherModal()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add Teacher
+          </button>
+        </div>
+        
+        <div class="filters">
+          <div class="filter-group" style="flex: 1; min-width: 250px;">
+            <label class="filter-label">Search</label>
+            <input type="text" class="filter-input" id="teacher-search" placeholder="Search by name...">
+          </div>
+          <div class="filter-group">
+            <label class="filter-label">Subject</label>
+            <select class="filter-select" id="teacher-subject-filter">
+              <option value="">All Subjects</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="admin-card">
+          <div class="card-body" style="padding: 0;">
+            <div class="table-container">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th style="width: 60px;">Photo</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Subject</th>
+                    <th>Qualification</th>
+                    <th>Experience</th>
+                    <th>Order</th>
+                    <th>Status</th>
+                    <th style="width: 140px;">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="teachers-body">
+                  <tr><td colspan="9" style="text-align:center;color:var(--color-text-light);">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="teachers-pagination" class="pagination" style="padding: var(--spacing-lg); border-top: 1px solid var(--color-light-gray);"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="teacher-modal">
+    <div class="modal" style="max-width: 700px;">
+      <div class="modal-header">
+        <h3 id="teacher-modal-title">Add Teacher</h3>
+        <button class="modal-close" onclick="AdminUtils.closeModal('teacher-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="teacher-form" novalidate>
+          <input type="hidden" id="teacher-id" name="id">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="teacher-name" class="form-label">Name *</label>
+              <input type="text" id="teacher-name" name="name" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="teacher-designation" class="form-label">Designation *</label>
+              <input type="text" id="teacher-designation" name="designation" class="form-input" required placeholder="e.g., Head Teacher">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="teacher-subject" class="form-label">Subject *</label>
+              <input type="text" id="teacher-subject" name="subject" class="form-input" required placeholder="e.g., Mathematics">
+            </div>
+            <div class="form-group">
+              <label for="teacher-qualification" class="form-label">Qualification</label>
+              <input type="text" id="teacher-qualification" name="qualification" class="form-input" placeholder="e.g., M.Sc Mathematics">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="teacher-experience" class="form-label">Experience</label>
+              <input type="text" id="teacher-experience" name="experience" class="form-input" placeholder="e.g., 20 years">
+            </div>
+            <div class="form-group">
+              <label for="teacher-displayOrder" class="form-label">Display Order</label>
+              <input type="number" id="teacher-displayOrder" name="displayOrder" class="form-input" min="0" value="0">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="teacher-achievement" class="form-label">Achievement</label>
+            <input type="text" id="teacher-achievement" name="achievement" class="form-input" placeholder="e.g., Best Teacher Award 2022">
+          </div>
+          
+          <div class="form-group">
+            <label for="teacher-biography" class="form-label">Biography</label>
+            <textarea id="teacher-biography" name="biography" class="form-textarea" rows="4"></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Photo</label>
+            <div class="file-upload" id="teacher-photo-upload">
+              <input type="file" id="teacher-photo-input" name="photo" accept="image/*">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-medium-gray); margin-bottom: var(--spacing-sm);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <p>Click or drag to upload photo (Square, max 5MB)</p>
+            </div>
+            <div class="file-preview" id="teacher-photo-preview"></div>
+            <p style="font-size: 0.8rem; color: var(--color-text-light); margin-top: var(--spacing-sm);" id="teacher-current-photo-hint"></p>
+          </div>
+          
+          <div class="form-checkbox">
+            <input type="checkbox" id="teacher-isActive" name="isActive" value="true" checked>
+            <label for="teacher-isActive">Teacher is active</label>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline" onclick="AdminUtils.closeModal('teacher-modal')">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save Teacher</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="delete-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Confirm Delete</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete this teacher? This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="AdminUtils.closeModal('delete-modal')">Cancel</button>
+        <button class="btn btn-danger" onclick="AdminUtils.executeDelete()">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/admin/js/admin.js"></script>
+  <script>
+    let currentTeacherPage = 1;
+    
+    document.addEventListener('DOMContentLoaded', async () => {
+      const admin = await AdminUtils.checkAuth();
+      if (!admin) {
+        window.location.href = '/admin/login.html';
+        return;
+      }
+      
+      document.getElementById('user-name').textContent = admin.name || 'Administrator';
+      document.getElementById('user-avatar').textContent = (admin.name || 'A').charAt(0).toUpperCase();
+      
+      const logoImg = document.getElementById('sidebar-logo');
+      try {
+        const data = await AdminUtils.fetchJSON('/api/settings/public');
+        if (data.settings?.logo) {
+          logoImg.src = data.settings.logo;
+        }
+      } catch (err) {
+        console.error('Failed to load logo:', err);
+      }
+      
+      await loadTeachers();
+      await loadSubjectFilter();
+      initTeacherForm();
+      AdminUtils.initFileUpload('teacher-photo-input', 'teacher-photo-preview');
+      
+      document.getElementById('teacher-search').addEventListener('input', AdminUtils.debounce(() => {
+        currentTeacherPage = 1;
+        loadTeachers();
+      }, 300));
+      
+      document.getElementById('teacher-subject-filter').addEventListener('change', () => {
+        currentTeacherPage = 1;
+        loadTeachers();
+      });
+    });
+    
+    async function loadSubjectFilter() {
+      try {
+        const data = await AdminUtils.fetchJSON('/api/teachers');
+        const subjects = [...new Set(data.teachers.map(t => t.subject).filter(Boolean))].sort();
+        const select = document.getElementById('teacher-subject-filter');
+        subjects.forEach(s => {
+          select.innerHTML += `<option value="${AdminUtils.escapeHtml(s)}">${AdminUtils.escapeHtml(s)}</option>`;
+        });
+      } catch (err) {
+        console.error('Failed to load subjects:', err);
+      }
+    }
+    
+    async function loadTeachers() {
+      const tbody = document.getElementById('teachers-body');
+      const search = document.getElementById('teacher-search').value;
+      const subjectFilter = document.getElementById('teacher-subject-filter').value;
+      
+      const params = new URLSearchParams({
+        page: currentTeacherPage,
+        limit: 20
+      });
+      if (search) params.append('search', search);
+      if (subjectFilter) params.append('subject', subjectFilter);
+      
+      try {
+        const data = await AdminUtils.fetchJSON(`/api/teachers?${params}`);
+        const teachers = data.teachers || [];
+        
+        if (teachers.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;color:var(--color-text-light);">No teachers found</td></tr>';
+          document.getElementById('teachers-pagination').innerHTML = '';
+          return;
+        }
+        
+        tbody.innerHTML = teachers.map(teacher => `
+          <tr>
+            <td><img src="${teacher.photo || ''}" alt="" class="table-image" style="background: var(--color-light-gray); border-radius: 50%;"></td>
+            <td>${AdminUtils.escapeHtml(teacher.name)}</td>
+            <td>${AdminUtils.escapeHtml(teacher.designation)}</td>
+            <td>${AdminUtils.escapeHtml(teacher.subject)}</td>
+            <td>${AdminUtils.escapeHtml(teacher.qualification || '-')}</td>
+            <td>${AdminUtils.escapeHtml(teacher.experience || '-')}</td>
+            <td>${teacher.displayOrder}</td>
+            <td><span class="table-status status-${teacher.isActive ? 'active' : 'inactive'}">${teacher.isActive ? 'Active' : 'Inactive'}</span></td>
+            <td>
+              <button class="action-btn edit" onclick="editTeacher('${teacher._id}')">Edit</button>
+              <button class="action-btn delete" onclick="confirmDelete('${teacher._id}', deleteTeacher)">Delete</button>
+            </td>
+          </tr>
+        `).join('');
+        
+        AdminUtils.renderPagination('teachers-pagination', data.page, data.totalPages, (page) => {
+          currentTeacherPage = page;
+          loadTeachers();
+        });
+      } catch (err) {
+        console.error('Failed to load teachers:', err);
+        tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;color:var(--color-danger);">Failed to load teachers</td></tr>';
+      }
+    }
+    
+    function openTeacherModal(teacher = null) {
+      const form = document.getElementById('teacher-form');
+      form.reset();
+      document.getElementById('teacher-photo-preview').innerHTML = '';
+      document.getElementById('teacher-current-photo-hint').textContent = '';
+      document.getElementById('teacher-id').value = '';
+      document.getElementById('teacher-modal-title').textContent = 'Add Teacher';
+      document.getElementById('teacher-photo-input').required = true;
+      document.getElementById('teacher-isActive').checked = true;
+      
+      if (teacher) {
+        document.getElementById('teacher-modal-title').textContent = 'Edit Teacher';
+        document.getElementById('teacher-id').value = teacher._id;
+        document.getElementById('teacher-name').value = teacher.name;
+        document.getElementById('teacher-designation').value = teacher.designation;
+        document.getElementById('teacher-subject').value = teacher.subject;
+        document.getElementById('teacher-qualification').value = teacher.qualification || '';
+        document.getElementById('teacher-experience').value = teacher.experience || '';
+        document.getElementById('teacher-achievement').value = teacher.achievement || '';
+        document.getElementById('teacher-biography').value = teacher.biography || '';
+        document.getElementById('teacher-displayOrder').value = teacher.displayOrder || 0;
+        document.getElementById('teacher-isActive').checked = teacher.isActive;
+        document.getElementById('teacher-photo-input').required = false;
+        if (teacher.photo) {
+          document.getElementById('teacher-current-photo-hint').textContent = `Current photo: ${teacher.photo}`;
+        }
+      }
+      
+      AdminUtils.openModal('teacher-modal');
+    }
+    
+    function editTeacher(id) {
+      AdminUtils.fetchJSON(`/api/teachers/${id}`).then(data => {
+        openTeacherModal(data.teacher);
+      }).catch(err => {
+        AdminUtils.showToast(err.message, 'error');
+      });
+    }
+    
+    function initTeacherForm() {
+      const form = document.getElementById('teacher-form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!AdminUtils.validateForm(form)) return;
+        
+        const btn = form.querySelector('button[type="submit"]');
+        AdminUtils.setLoading(btn, true);
+        
+        const id = document.getElementById('teacher-id').value;
+        const isEdit = !!id;
+        
+        const formData = new FormData();
+        formData.append('name', document.getElementById('teacher-name').value);
+        formData.append('designation', document.getElementById('teacher-designation').value);
+        formData.append('subject', document.getElementById('teacher-subject').value);
+        formData.append('qualification', document.getElementById('teacher-qualification').value);
+        formData.append('experience', document.getElementById('teacher-experience').value);
+        formData.append('achievement', document.getElementById('teacher-achievement').value);
+        formData.append('biography', document.getElementById('teacher-biography').value);
+        formData.append('displayOrder', document.getElementById('teacher-displayOrder').value);
+        formData.append('isActive', document.getElementById('teacher-isActive').checked ? 'true' : 'false');
+        
+        const photoInput = document.getElementById('teacher-photo-input');
+        if (photoInput.files[0]) {
+          formData.append('photo', photoInput.files[0]);
+        }
+        
+        try {
+          const url = isEdit ? `/api/teachers/${id}` : '/api/teachers';
+          await AdminUtils.fetchFormData(url, formData);
+          
+          AdminUtils.showToast(isEdit ? 'Teacher updated successfully' : 'Teacher created successfully');
+          AdminUtils.closeModal('teacher-modal');
+          await loadTeachers();
+        } catch (err) {
+          AdminUtils.showToast(err.message, 'error');
+        } finally {
+          AdminUtils.setLoading(btn, false);
+        }
+      });
+    }
+    
+    async function deleteTeacher(id) {
+      try {
+        await AdminUtils.fetchJSON(`/api/teachers/${id}`, { method: 'DELETE' });
+        AdminUtils.showToast('Teacher deleted successfully');
+        await loadTeachers();
+      } catch (err) {
+        AdminUtils.showToast(err.message, 'error');
+      }
+    }
+    
+    function logout() {
+      AdminUtils.fetchJSON('/api/auth/logout', { method: 'POST' }).then(() => {
+        window.location.href = '/admin/login.html';
+      });
+    }
+  </script>
+</body>
+</html>

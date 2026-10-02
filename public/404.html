@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>404 - Page Not Found | Chand Mia High School</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-main">
+      <div class="container">
+        <a href="/" class="logo" aria-label="Chand Mia High School Home">
+          <img src="" alt="" class="logo-image logo-image-main" loading="lazy">
+          <div class="logo-text">
+            <span class="logo-title" data-setting="name">Chand Mia High School</span>
+            <span class="logo-subtitle" data-setting="address">Nesarabad, Pirojpur, Bangladesh</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <div class="error-page">
+      <div class="container">
+        <div class="error-code">404</div>
+        <h1 class="error-message">Page Not Found</h1>
+        <p style="color: var(--color-text-light); margin-bottom: var(--spacing-xl); max-width: 400px; margin-left: auto; margin-right: auto;">
+          Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.
+        </p>
+        <div class="error-actions">
+          <a href="/" class="btn btn-primary btn-lg">Go Home</a>
+          <a href="/contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; <span id="year"></span> Chand Mia High School. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
